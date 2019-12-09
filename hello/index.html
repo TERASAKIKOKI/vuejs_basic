@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Mustache構文 -->
+    <p>
+      {{ message }}
+    </p>
+
+    <!-- v-if  -->
+    <p v-if="toggle">
+      <!-- v-bind -->
+      <a v-bind:href="url">Vue.js</a>
+    </p>
+
+    <!-- v-on イベントバンドラ jsで関数定義 -->
+    <button v-on:click="clickHandler">Click!</button>
+    
+    <!-- v-for 配列をリスト表示 -->
+    <ul>
+      <li v-for="language in languages">{{ language }}</li>
+    </ul>
+
+    <!-- 双方向バインディング -->
+    <p>
+      <input type="text" v-model="message">
+    </p>
+  </div>
+  
+  <!-- vuejsのCDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <!-- jsの読み込み ※vuejsを読み込んだ後に書く-->
+  <script src="js/main.js"></script>
+</body>
+</html>
